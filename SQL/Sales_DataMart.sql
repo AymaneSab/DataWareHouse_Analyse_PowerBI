@@ -1,0 +1,11 @@
+DROP TABLE DBO.Customer ;
+DROP TABLE DBO.Date ;
+DROP TABLE DBO.Product ;
+DROP TABLE DBO.Sales ;
+DROP TABLE DBO.Shipper ;
+
+SELECT * FROM DBO.Customer ;
+SELECT * FROM DBO.Date ;
+SELECT * FROM DBO.Product ;
+SELECT * FROM DBO.Sales ;
+SELECT * FROM DBO.Shipper ;

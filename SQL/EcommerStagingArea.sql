@@ -1,0 +1,5 @@
+--- ECOMMERCE STAGING AREA 
+
+DROP TABLE DBO.Ecommerce;
+
+SELECT * FROM  DBO.Ecommerce ;
