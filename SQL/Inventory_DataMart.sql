@@ -11,4 +11,3 @@ SELECT * FROM DBO.Supplier;
 SELECT * FROM DBO.Inventory;
 
 
-SELECT COUNT(*) FROM Product;
