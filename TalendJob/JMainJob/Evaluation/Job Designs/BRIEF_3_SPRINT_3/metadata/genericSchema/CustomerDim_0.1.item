@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010">
+  <TalendMetadata:GenericSchemaConnection xmi:id="_CeiRYGNkEe6W2MSur-_Rhg" dataPackage="_CeiRYWNkEe6W2MSur-_Rhg"/>
+  <TalendMetadata:GenericPackage xmi:id="_CeiRYWNkEe6W2MSur-_Rhg" dataManager="_CeiRYGNkEe6W2MSur-_Rhg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_CeiRYmNkEe6W2MSur-_Rhg" id="_CeenAGNkEe6W2MSur-_Rhg" label="CustomerDim">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRY2NkEe6W2MSur-_Rhg" name="CustomerID" label="CustomerID" length="10" sourceType="INT" talendType="id_Integer" key="true" nullable="false">
+        <initialValue xmi:id="_CeiRZGNkEe6W2MSur-_Rhg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRZWNkEe6W2MSur-_Rhg" name="CustomerName" label="CustomerName" length="50" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_CeiRZmNkEe6W2MSur-_Rhg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRZ2NkEe6W2MSur-_Rhg" name="CustomerEmail" label="CustomerEmail" length="50" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_CeiRaGNkEe6W2MSur-_Rhg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRaWNkEe6W2MSur-_Rhg" name="CustomerAddress" label="CustomerAddress" length="100" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_CeiRamNkEe6W2MSur-_Rhg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRa2NkEe6W2MSur-_Rhg" name="CustomerPhone" label="CustomerPhone" length="100" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_CeiRbGNkEe6W2MSur-_Rhg"/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_CeiRbWNkEe6W2MSur-_Rhg" name="CustomerSegment" label="CustomerSegment" length="50" sourceType="VARCHAR" talendType="id_String">
+        <initialValue xmi:id="_CeiRbmNkEe6W2MSur-_Rhg"/>
+      </feature>
+    </ownedElement>
+  </TalendMetadata:GenericPackage>
+</xmi:XMI>

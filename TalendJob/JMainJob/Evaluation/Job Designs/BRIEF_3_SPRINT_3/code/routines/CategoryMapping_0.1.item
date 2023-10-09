@@ -1,0 +1,33 @@
+package routines;
+
+public class CategoryMapping {
+    public String mapCategory(String productSubCategory) {
+        // ConvertING the productSubCategory 
+        String upperCaseProductSubCategory = productSubCategory.toUpperCase();
+
+        // MapPING the  ProductSubCategory
+        switch (upperCaseProductSubCategory) {
+            case "CAMERA":
+            case "MOBILE":
+            case "HEADPHONES":
+                return "ELECTRONICS";
+            case "DECOR":
+            case "GARDENING TOOLS":
+            case "FURNITURE":
+                return "HOME & GARDEN";
+            case "ACTION FIGURES":
+            case "TOYS":
+            case "DOLLS":
+            case "EDUCATIONAL":
+                return "TOYS";
+            case "FICTION":
+            case "NON-FICTION":
+            case "ACADEMIC":
+                return "BOOKS";
+            case "SHIRT":
+                return "CLOTHING";
+            default:
+                return "UNKNOWN CATEGORY";  // Handle unknown categories 
+        }
+    }
+}

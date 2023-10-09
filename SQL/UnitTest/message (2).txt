@@ -1,0 +1,134 @@
+===================================================================================================================
+------ unite testing ----------------------------
+
+
+EXEC tsqlt.NewTestClass 'DataWarehouseTestsIventory';
+
+---- Foreign Key Integrity Test
+CREATE PROCEDURE DataWarehouseTestsIventory.[test ForeignKeysAreValid]
+AS
+BEGIN
+    -- Arrange (Insert test data into your data warehouse tables if needed)
+
+    -- Act (Run the code that you want to test)
+    DECLARE @FailedFKChecks TABLE (
+        TableName NVARCHAR(255),
+        ForeignKeyColumn NVARCHAR(255),
+        ReferencedTable NVARCHAR(255),
+        ReferencedColumn NVARCHAR(255)
+    );
+
+    -- Check foreign key integrity in your SalesFact table
+    INSERT INTO @FailedFKChecks
+    SELECT
+        'InventoryID' AS TableName,
+        'DateID' AS ForeignKeyColumn,
+        'DimDate' AS ReferencedTable,
+        'DateID' AS ReferencedColumn
+    FROM
+        InventoryFact AS inf
+    WHERE
+        NOT EXISTS (
+            SELECT 1
+            FROM DimDate AS DD
+            WHERE inf.DateID = DD.DateID
+        );
+
+    INSERT INTO @FailedFKChecks
+    SELECT
+        'InventoryID' AS TableName,
+        'ProductID' AS ForeignKeyColumn,
+        'DimProduct' AS ReferencedTable,
+        'ProductID' AS ReferencedColumn
+    FROM
+        InventoryFact AS inf
+    WHERE
+        NOT EXISTS (
+            SELECT 1
+            FROM DimProduct AS DP
+            WHERE inf.ProductID = DP.ProductID
+        );
+
+    INSERT INTO @FailedFKChecks
+    SELECT
+        'InventoryID' AS TableName,
+        'SupplierID' AS ForeignKeyColumn,
+        'DimSupplier' AS ReferencedTable,
+        'SupplierID' AS ReferencedColumn
+    FROM
+        InventoryFact AS inf
+    WHERE
+        NOT EXISTS (
+            SELECT 1
+            FROM DimSupplier AS DS
+            WHERE inf.SupplierID = DS.SupplierID
+        );
+
+    -- Assert (Verify foreign key integrity)
+    IF (SELECT COUNT(*) FROM @FailedFKChecks) > 0
+    BEGIN
+        DECLARE @ErrorMessage NVARCHAR(MAX);
+        
+        SELECT @ErrorMessage = STRING_AGG(
+            'Foreign key constraint violation in ' + TableName + 
+            '. Column ' + ForeignKeyColumn + 
+            ' references ' + ReferencedTable + '.' + ReferencedColumn,
+            CHAR(10)
+        )
+        FROM @FailedFKChecks;
+
+        -- Fail the test if there are foreign key violations
+        EXEC tSQLt.Fail @ErrorMessage;
+    END
+END;
+
+
+--- test ProductPrice, QuantitySold, NetAmount, TotalAmount
+CREATE PROCEDURE DataWarehouseTestsIventory.[test ValidInventoryData]
+AS
+BEGIN
+    -- Arrange (Insert test data into your data warehouse tables if needed)
+
+    -- Act (Run the code that you want to test)
+    DECLARE @InvalidInventoryData TABLE (
+        InvalidRowID INT IDENTITY(1,1),
+        StockReceived INT,
+        StockSold INT,
+        StockOnHand INT
+    );
+
+    -- Check for invalid inventory data
+    INSERT INTO @InvalidInventoryData (StockReceived, StockSold, StockOnHand)
+    SELECT
+        StockReceived,
+        StockSold,
+        StockOnHand
+    FROM
+        InventoryFact
+    WHERE
+        StockReceived < 0
+        OR StockSold < 0
+        OR StockOnHand < 0;
+
+    -- Assert (Verify that there are no invalid inventory data)
+    IF (SELECT COUNT(*) FROM @InvalidInventoryData) > 0
+    BEGIN
+        DECLARE @ErrorMessage NVARCHAR(MAX);
+        
+        SELECT @ErrorMessage = STRING_AGG(
+            'Invalid inventory data in row ' + CAST(InvalidRowID AS NVARCHAR(255)) +
+            '. StockReceived: ' + CAST(StockReceived AS NVARCHAR(255)) +
+            ', StockSold: ' + CAST(StockSold AS NVARCHAR(255)) +
+            ', StockOnHand: ' + CAST(StockOnHand AS NVARCHAR(255)),
+            CHAR(10)
+        )
+        FROM @InvalidInventoryData;
+
+        -- Fail the test if invalid inventory data is found
+        EXEC tSQLt.Fail @ErrorMessage;
+    END
+END;
+
+
+
+EXEC tsqlt.Run 'DataWarehouseTestsIventory';

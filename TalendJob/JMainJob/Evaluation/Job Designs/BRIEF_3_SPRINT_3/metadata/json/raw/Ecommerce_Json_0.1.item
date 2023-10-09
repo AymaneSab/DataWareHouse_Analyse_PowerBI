@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendJSON="http://www.talend.org/json" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendJSON:JSONFileConnection xmi:id="_gy0nEGEmEe6tRP8c9plnEQ" name="Ecommerce_Json" dataPackage="_gy0nKGEmEe6tRP8c9plnEQ" JSONFilePath="/Users/sabri/Desktop/Study /Youcode/Github/Sprint_3/DataWareHouse_Analyse_PowerBI/DataSet/Splitted/JsonData.json" Encoding="UTF-8" readbyMode="JSONPATH">
+    <schema xmi:id="_gy0nEWEmEe6tRP8c9plnEQ" LimitBoucle="50" AbsoluteXPathQuery="$[*]">
+      <schemaTargets xmi:id="_gy0nEmEmEe6tRP8c9plnEQ" RelativeXPathQuery="Date" TagName="Date"/>
+      <schemaTargets xmi:id="_gy0nE2EmEe6tRP8c9plnEQ" RelativeXPathQuery="ProductName" TagName="ProductName"/>
+      <schemaTargets xmi:id="_gy0nFGEmEe6tRP8c9plnEQ" RelativeXPathQuery="ProductCategory" TagName="ProductCategory"/>
+      <schemaTargets xmi:id="_gy0nFWEmEe6tRP8c9plnEQ" RelativeXPathQuery="ProductSubCategory" TagName="ProductSubCategory"/>
+      <schemaTargets xmi:id="_gy0nFmEmEe6tRP8c9plnEQ" RelativeXPathQuery="ProductPrice" TagName="ProductPrice"/>
+      <schemaTargets xmi:id="_gy0nF2EmEe6tRP8c9plnEQ" RelativeXPathQuery="CustomerName" TagName="CustomerName"/>
+      <schemaTargets xmi:id="_gy0nGGEmEe6tRP8c9plnEQ" RelativeXPathQuery="CustomerEmail" TagName="CustomerEmail"/>
+      <schemaTargets xmi:id="_gy0nGWEmEe6tRP8c9plnEQ" RelativeXPathQuery="CustomerAddress" TagName="CustomerAddress"/>
+      <schemaTargets xmi:id="_gy0nGmEmEe6tRP8c9plnEQ" RelativeXPathQuery="CustomerPhone" TagName="CustomerPhone"/>
+      <schemaTargets xmi:id="_gy0nG2EmEe6tRP8c9plnEQ" RelativeXPathQuery="CustomerSegment" TagName="CustomerSegment"/>
+      <schemaTargets xmi:id="_gy0nHGEmEe6tRP8c9plnEQ" RelativeXPathQuery="SupplierName" TagName="SupplierName"/>
+      <schemaTargets xmi:id="_gy0nHWEmEe6tRP8c9plnEQ" RelativeXPathQuery="SupplierLocation" TagName="SupplierLocation"/>
+      <schemaTargets xmi:id="_gy0nHmEmEe6tRP8c9plnEQ" RelativeXPathQuery="SupplierContact" TagName="SupplierContact"/>
+      <schemaTargets xmi:id="_gy0nH2EmEe6tRP8c9plnEQ" RelativeXPathQuery="ShipperName" TagName="ShipperName"/>
+      <schemaTargets xmi:id="_gy0nIGEmEe6tRP8c9plnEQ" RelativeXPathQuery="ShippingMethod" TagName="ShippingMethod"/>
+      <schemaTargets xmi:id="_gy0nIWEmEe6tRP8c9plnEQ" RelativeXPathQuery="QuantitySold" TagName="QuantitySold"/>
+      <schemaTargets xmi:id="_gy0nImEmEe6tRP8c9plnEQ" RelativeXPathQuery="TotalAmount" TagName="TotalAmount"/>
+      <schemaTargets xmi:id="_gy0nI2EmEe6tRP8c9plnEQ" RelativeXPathQuery="DiscountAmount" TagName="DiscountAmount"/>
+      <schemaTargets xmi:id="_gy0nJGEmEe6tRP8c9plnEQ" RelativeXPathQuery="NetAmount" TagName="NetAmount"/>
+      <schemaTargets xmi:id="_gy0nJWEmEe6tRP8c9plnEQ" RelativeXPathQuery="StockReceived" TagName="StockReceived"/>
+      <schemaTargets xmi:id="_gy0nJmEmEe6tRP8c9plnEQ" RelativeXPathQuery="StockSold" TagName="StockSold"/>
+      <schemaTargets xmi:id="_gy0nJ2EmEe6tRP8c9plnEQ" RelativeXPathQuery="StockOnHand" TagName="StockOnHand"/>
+    </schema>
+  </TalendJSON:JSONFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_gy0nKGEmEe6tRP8c9plnEQ" name="default" dataManager="_gy0nEGEmEe6tRP8c9plnEQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_gy0nKWEmEe6tRP8c9plnEQ" id="_Zb3AkGEmEe6tRP8c9plnEQ" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhwGEoEe6tRP8c9plnEQ" name="" label="Date" length="10" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhwWEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhwmEoEe6tRP8c9plnEQ" name="" label="ProductName" length="18" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhw2EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhxGEoEe6tRP8c9plnEQ" name="" label="ProductCategory" length="15" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhxWEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhxmEoEe6tRP8c9plnEQ" name="" label="ProductSubCategory" length="15" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhx2EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhyGEoEe6tRP8c9plnEQ" name="" label="ProductPrice" length="17" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhyWEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhymEoEe6tRP8c9plnEQ" name="" label="CustomerName" length="20" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhy2EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhzGEoEe6tRP8c9plnEQ" name="" label="CustomerEmail" length="31" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhzWEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOhzmEoEe6tRP8c9plnEQ" name="" label="CustomerAddress" length="34" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOhz2EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh0GEoEe6tRP8c9plnEQ" name="" label="CustomerPhone" length="18" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh0WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh0mEoEe6tRP8c9plnEQ" name="" label="CustomerSegment" length="22" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh02EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh1GEoEe6tRP8c9plnEQ" name="" label="SupplierName" length="22" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh1WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh1mEoEe6tRP8c9plnEQ" name="" label="SupplierLocation" length="16" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh12EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh2GEoEe6tRP8c9plnEQ" name="" label="SupplierContact" length="23" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh2WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh2mEoEe6tRP8c9plnEQ" name="" label="ShipperName" length="23" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh22EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh3GEoEe6tRP8c9plnEQ" name="" label="ShippingMethod" length="21" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh3WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh3mEoEe6tRP8c9plnEQ" name="" label="QuantitySold" length="21" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh32EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh4GEoEe6tRP8c9plnEQ" name="" label="TotalAmount" length="8" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh4WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh4mEoEe6tRP8c9plnEQ" name="" label="DiscountAmount" length="8" precision="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh42EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh5GEoEe6tRP8c9plnEQ" name="" label="NetAmount" length="18" precision="-1" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh5WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh5mEoEe6tRP8c9plnEQ" name="" label="StockReceived" length="18" precision="-1" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh52EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh6GEoEe6tRP8c9plnEQ" name="" label="StockSold" length="17" precision="-1" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh6WEoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_BTOh6mEoEe6tRP8c9plnEQ" name="" label="StockOnHand" length="18" precision="13" talendType="id_Float" pattern="&quot;dd-MM-yyyy&quot;" originalLength="-1">
+        <initialValue xmi:id="_BTOh62EoEe6tRP8c9plnEQ" body=""/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
